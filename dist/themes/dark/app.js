@@ -12,7 +12,7 @@ document.write('<script src="//cdn.dashjs.org/latest/dash.all.min.js"></script>'
 document.write('<script src="//cdn.jsdelivr.net/npm/plyr@3.6.8/dist/plyr.min.js"></script>');
 // markdown支持
 document.write('<script src="//cdn.jsdelivr.net/npm/markdown-it@12.1.0/dist/markdown-it.min.js"></script>');
-document.write('<style>.bimg{background-image: url(' + ThemeConfig.bimg + ');}.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>*{padding:0 6px;margin:0 2px}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}.mdui-container{width:100%!important;margin:0 auto;}</style>');
+//document.write('<style>.bimg{background-image: url(' + ThemeConfig.bimg + ');}.mdui-appbar .mdui-toolbar{height:56px;font-size:1pc}.mdui-toolbar>*{padding:0 6px;margin:0 2px}.mdui-toolbar>i{opacity:.5}.mdui-toolbar>i{padding:0}.mdui-toolbar>a:hover,a.active,a.mdui-typo-headline{opacity:1}.mdui-list-item{transition:none}.mdui-list>.th{background-color:initial}.mdui-list-item>a{width:100%;line-height:3pc}.mdui-list-item{margin:2px 0;padding:0}.mdui-toolbar>a:last-child{opacity:1}.mdui-container{width:100%!important;margin:0 auto;}</style>');
 
 // 初始化页面，并载入必要资源
 function init() {
@@ -277,15 +277,15 @@ function list(path) {
     <ul class="mdui-list"> 
      <li class="mdui-list-item th"> 
       <div class="mdui-col-xs-12 mdui-col-sm-7">
-       文件
+       File
   <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="more">expand_more</i>
       </div> 
       <div class="mdui-col-sm-3 mdui-text-right">
-       修改时间
+       Modified Time
   <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
       </div> 
       <div class="mdui-col-sm-2 mdui-text-right">
-       大小
+       Size
   <i class="mdui-icon material-icons icon-sort" data-sort="size" data-order="downward">expand_more</i>
       </div> 
       </li> 
@@ -507,15 +507,15 @@ function render_search_result_list() {
     <ul class="mdui-list"> 
      <li class="mdui-list-item th"> 
       <div class="mdui-col-xs-12 mdui-col-sm-7">
-       文件
+       File
   <i class="mdui-icon material-icons icon-sort" data-sort="name" data-order="more">expand_more</i>
       </div> 
       <div class="mdui-col-sm-3 mdui-text-right">
-       修改时间
+       Modified Time
   <i class="mdui-icon material-icons icon-sort" data-sort="date" data-order="downward">expand_more</i>
       </div> 
       <div class="mdui-col-sm-2 mdui-text-right">
-       大小
+       Size
   <i class="mdui-icon material-icons icon-sort" data-sort="size" data-order="downward">expand_more</i>
       </div> 
       </li> 
