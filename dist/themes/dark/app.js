@@ -1045,7 +1045,6 @@ function file_video(path) {
         preload: 'auto',
         video: {
             pic: urlPath + video_cover,
-            thumbnails: urlPath + ThemeConfig.thumbnails[0].url,
             quality: [{
                 name: 'HD',
                 url: url,
