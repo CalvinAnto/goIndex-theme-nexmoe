@@ -995,13 +995,7 @@ function file_video(path) {
         window.dash = dash;
     } else {
         var thumbnail_url = ThemeConfig.thumbnails[1].url;
-        thumbnail_url = thumbnail_url.substring(thumbnail_url.indexOf("$"), thumbnail_url.lastIndexOf("."));
-        if (thumbnail_url == "${fileName}") {
-            thumbnail_url = ThemeConfig.thumbnails[1].url;
-            thumbnail_url = thumbnail_url.substring(0,thumbnail_url.lastIndexOf("$")) + fileName + thumbnail_url.substring(thumbnail_url.lastIndexOf("."));
-        } else {
-            thumbnail_url = "Thumbnail/plyr.vtt";
-        }
+        thumbnail_url = thumbnail_url.substring(0,thumbnail_url.lastIndexOf("$")) + fileName + thumbnail_url.substring(thumbnail_url.lastIndexOf("."));
         const player = new Plyr('#player', {
             controls: ['play-large', 'restart', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
             settings: ['captions', 'quality', 'speed', 'loop'],
