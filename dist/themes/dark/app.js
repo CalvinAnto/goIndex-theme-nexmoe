@@ -995,7 +995,13 @@ function file_video(path) {
         window.dash = dash;
     } else {
         var thumbnail_url = ThemeConfig.thumbnails[1].url;
-        thumbnail_url = thumbnail_url.substring(0,thumbnail_url.lastIndexOf("$")) + fileName + thumbnail_url.substring(thumbnail_url.lastIndexOf("_"));
+        thumbnail_url = thumbnail_url.substring(thumbnail_url.indexOf("$"), thumbnail_url.lastIndexOf("."));
+        if (thumbnail_url == "${fileName}") {
+            thumbnail_url = ThemeConfig.thumbnails[1].url;
+            thumbnail_url = thumbnail_url.substring(0,thumbnail_url.lastIndexOf("$")) + fileName + thumbnail_url.substring(thumbnail_url.lastIndexOf("."));
+        } else {
+            thumbnail_url = "Thumbnail/plyr.vtt";
+        }
         const player = new Plyr('#player', {
             controls: ['play-large', 'restart', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
             settings: ['captions', 'quality', 'speed', 'loop'],
@@ -1020,18 +1026,18 @@ function file_video(path) {
                 type: 'video/' + playerType,
                 size: 1080,
             }, ],
-//             poster: urlPath + video_cover,
+            poster: urlPath + video_cover,
             previewThumbnails: {
                 enabled: true,
                 src: urlPath + thumbnail_url,
             },
-//             tracks: [{
-//                 kind: 'captions',
-//                 label: 'default',
-//                 srclang: 'cn',
-//                 src: urlPath + video_subtitle,
-//                 default: true,
-//             }, ],
+            tracks: [{
+                kind: 'captions',
+                label: 'default',
+                srclang: 'en',
+                src: urlPath + video_subtitle,
+                default: true,
+            }, ],
         };
         window.player = player;
     }
