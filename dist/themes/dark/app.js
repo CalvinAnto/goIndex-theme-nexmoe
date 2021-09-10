@@ -928,7 +928,7 @@ function file_video(path) {
     $('#content').html(content);
     $('#copy-link').on('click', () => {
         copyToClipboard(url);
-        mdui.snackbar('已复制到剪切板!');
+        mdui.snackbar('Copied to Clipboard!');
     });
 
     if (ext == 'm3u8') {
@@ -936,13 +936,13 @@ function file_video(path) {
         const player = new Plyr(video, {
             controls: ['play-large', 'restart', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
             settings: ['captions', 'quality', 'speed', 'loop'],
-            i18n: {
-                speed: '速度',
-                normal: '正常',
-                quality: '质量',
-                captions: '字幕',
-                disabled: '禁用',
-            },
+//             i18n: {
+//                 speed: '速度',
+//                 normal: '正常',
+//                 quality: '质量',
+//                 captions: '字幕',
+//                 disabled: '禁用',
+//             },
             blankVideo: 'https://cdn.plyr.io/static/blank.mp4',
             autoplay: true,
             disableContextMenu: false,
@@ -976,13 +976,13 @@ function file_video(path) {
         const player = new Plyr(video, {
             controls: ['play-large', 'restart', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
             settings: ['captions', 'quality', 'speed', 'loop'],
-            i18n: {
-                speed: '速度',
-                normal: '正常',
-                quality: '质量',
-                captions: '字幕',
-                disabled: '禁用',
-            },
+//             i18n: {
+//                 speed: '速度',
+//                 normal: '正常',
+//                 quality: '质量',
+//                 captions: '字幕',
+//                 disabled: '禁用',
+//             },
             blankVideo: 'https://cdn.plyr.io/static/blank.mp4',
             autoplay: true,
             disableContextMenu: false,
@@ -997,13 +997,13 @@ function file_video(path) {
         const player = new Plyr('#player', {
             controls: ['play-large', 'restart', 'play', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'pip', 'fullscreen'],
             settings: ['captions', 'quality', 'speed', 'loop'],
-            i18n: {
-                speed: '速度',
-                normal: '正常',
-                quality: '质量',
-                captions: '字幕',
-                disabled: '禁用',
-            },
+//             i18n: {
+//                 speed: '速度',
+//                 normal: '正常',
+//                 quality: '质量',
+//                 captions: '字幕',
+//                 disabled: '禁用',
+//             },
             blankVideo: 'https://cdn.plyr.io/static/blank.mp4',
             autoplay: true,
             disableContextMenu: false,
@@ -1018,18 +1018,18 @@ function file_video(path) {
                 type: 'video/' + playerType,
                 size: 1080,
             }, ],
-            poster: urlPath + video_cover,
+//             poster: urlPath + video_cover,
             previewThumbnails: {
                 enabled: true,
                 src: urlPath + ThemeConfig.thumbnails[1].url,
             },
-            tracks: [{
-                kind: 'captions',
-                label: 'default',
-                srclang: 'cn',
-                src: urlPath + video_subtitle,
-                default: true,
-            }, ],
+//             tracks: [{
+//                 kind: 'captions',
+//                 label: 'default',
+//                 srclang: 'cn',
+//                 src: urlPath + video_subtitle,
+//                 default: true,
+//             }, ],
         };
         window.player = player;
     }
@@ -1039,12 +1039,12 @@ function file_video(path) {
         autoplay: true,
         theme: '#b7daff',
         loop: true,
-        lang: 'zh-cn',
+        lang: 'en-us',
         screenshot: true,
         hotkey: true,
         preload: 'auto',
         video: {
-            pic: urlPath + video_cover,
+//             pic: urlPath + video_cover,
             quality: [{
                 name: 'HD',
                 url: url,
